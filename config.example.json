@@ -1,0 +1,7 @@
+{
+  "access_token": "your-token-here",
+  "preferred_seats": [],
+  "booking_time": "18:00",
+  "days_ahead": 8,
+  "auto_checkin": true
+}

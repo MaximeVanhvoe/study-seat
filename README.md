@@ -27,6 +27,24 @@ Each release includes:
 2. Copy `config.example.json` to `config.json` and fill in your access token.
 3. Launch the app, set your preferred seats and booking time.
 
+### macOS — "Not Opened" warning
+
+Because study-seat is not distributed through the App Store, macOS will block it on first launch. To open it anyway:
+
+**Option A — Right-click method (easiest)**
+Right-click (or Control-click) the app → **Open** → click **Open** in the dialog that appears.
+
+**Option B — System Settings**
+Go to **System Settings → Privacy & Security**, scroll down, and click **Open Anyway** next to the study-seat entry.
+
+**Option C — Terminal**
+```bash
+xattr -cr /path/to/study-seat.app
+```
+Then double-click as normal.
+
+You only need to do this once.
+
 ## Why binary-only distribution?
 
 The booking engine is not open-sourced. Publishing the automation logic would make it trivial to flood the reservation system with bulk requests, degrading availability for all students who use the library. By distributing compiled binaries and managing access via tokens, the tool stays fair and the shared infrastructure stays protected.

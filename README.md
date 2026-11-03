@@ -17,9 +17,8 @@ Popular study spots fill within seconds of becoming available — especially in 
 Get the latest version from the **[Releases page](../../releases/latest)**.
 
 Each release includes:
-- `study-seat.app` — macOS
-- `study-seat.exe` — Windows
-- `config.example.json` — configuration template
+- `study-seat-macos.zip` — macOS (contains `study-seat.app`)
+- `study-seat-windows.zip` — Windows (contains the `study-seat` folder with `study-seat.exe`)
 
 ## Setup
 
@@ -44,6 +43,18 @@ xattr -cr /path/to/study-seat.app
 Then double-click as normal.
 
 You only need to do this once.
+
+### Windows — installing and first launch
+
+1. Download `study-seat-windows.zip`.
+2. **Unblock the zip before extracting:** right-click the zip → **Properties** → tick **Unblock** at the bottom → **OK**. Without this, Windows can refuse to load the app's components and it crashes on start.
+3. **Extract the whole zip** (right-click → **Extract All…**) to a normal folder, e.g. `Documents\study-seat`. Do not run `study-seat.exe` from inside the zip: it needs the `_internal` folder next to it.
+4. Open the extracted `study-seat` folder and double-click `study-seat.exe`.
+5. If you see **"Windows protected your PC"** (SmartScreen): click **More info** → **Run anyway**. The app is not code-signed, so Windows shows this once.
+6. If `study-seat.exe` disappears after extracting, Microsoft Defender flagged it as a false positive. Restore it via **Windows Security → Virus & threat protection → Protection history**.
+7. If the window stays blank or white, install the free [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/) (Evergreen, x64) and start the app again.
+
+Google Chrome must be installed for login and check-in. Windows 10 or 11 (64-bit) is required.
 
 ## Why binary-only distribution?
 
